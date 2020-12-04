@@ -1,0 +1,41 @@
+
+--------------------------Library Management System-------------------------------------------
+create database lib;
+use lib;
+CREATE TABLE Books(Book_id int(5) primary key,
+Book_Name varchar(30),
+Subject_Name varchar(30),
+Author_Name varchar(30));
+
+CREATE TABLE BookIssue(Issue_No int(5),
+Book_id int(5) primary key,
+Book_Name varchar(30), 
+DOI_name varchar(13),
+DOR_name varchar(20),
+Sroll_no int(5),
+s_name varchar(10));
+
+CREATE TABLE Student(s_rollno int(5),
+s_name varchar(30),
+s_class varchar(30));
+
+desc Books;
+desc BookIssue;
+desc Student;
+
+INSERT INTO Books VALUES(1,'java','core java','balaguruswamy');
+INSERT INTO Books VALUES(2,'C','C Programming','Yashvant kanetkar');
+
+select * from Books;
+
+INSERT INTO BookIssue VALUES(10,101,'Java','cdept','dept',5,'Pooja');
+INSERT INTO BookIssue VALUES(11,102,'C','ddpt','cdpt',6,'deepa');
+
+select * from BookIssue;
+
+INSERT INTO Student VALUES(25,'deepak','tenth');
+INSERT INTO Student VALUES(26,'meena','fifth');
+
+select * from Student;
+
+	
